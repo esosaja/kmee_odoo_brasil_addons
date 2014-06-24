@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Adiciona menu Schooling ao menu superior Configuration -->
+        <menuitem id="menu_hr_schooling" name="Schooling" parent="hr.menu_hr_configuration"/>
+
+        <!-- Adiciona o formulário de cadastro de escola -->
+        <record id="view_hr_schooling_school_form" model="ir.ui.view">
+            <field name="name">hr.schooling.school.form</field>
+            <field name="model">hr.schooling.school</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="School">                    
+                    <separator colspan="8" string="Schools" />              
+                    <group colspan="4" col="4">
+                        <field name="name" colspan="4" />
+                        <field name="state_id" colspan="2"/>
+                        <field name="city_id" colspan="2"/>
+                        <field name="description" colspan="2" />
+                    </group>                  
+                </form>
+            </field>
+        </record>
+
+        <!-- Adiciona o formulário de cadastro de curso -->
+        <record id="view_hr_schooling_course_form" model="ir.ui.view">
+            <field name="name">hr.schooling.course.form</field>
+            <field name="model">hr.schooling.course</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="School">                    
+                    <separator colspan="8" string="Courses" />              
+                    <group colspan="4" col="8">
+                        <field name="name" colspan="2" />
+                        <field name="description" colspan="2" />
+                    </group>                  
+                </form>
+            </field>
+        </record>
+
+        <!-- Adiciona árvore do modelo Escola -->
+         <record id="view_hr_schooling_school_tree" model="ir.ui.view">
+            <field name="name">hr.schooling.school.tree</field>
+            <field name="model">hr.schooling.school</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="School">
+                        <field name="name" />
+                        <field name="state_id"/>
+                        <field name="city_id"/>
+                        <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Adiciona árvore do modelo Curso -->
+        <record id="view_hr_schooling_course_tree" model="ir.ui.view">
+            <field name="name">hr.schooling.course.tree</field>
+            <field name="model">hr.schooling.course</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                        <field name="name" />
+                        <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Adiciona formulário Many2Many para seleção de Escolas e Cursos -->
+        <record id="view_hr_schooling_course_option_form" model="ir.ui.view">
+            <field name="name">hr.schooling.course.option.form</field>
+            <field name="model">hr.employee</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <notebook colspan="6">
+                    <page string="Schooling">
+                        <group colspan="2" col="2"> 
+                            <field name="school_course" colspan="2" select="1"/>
+                            <field name="anexos" />
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record> 
+
+        <!-- Adiciona árvore do modelo Escola e Curso -->
+        <record id="view_hr_schooling_course_option_tree" model="ir.ui.view">
+            <field name="name">hr.schooling.course.option.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="School" >
+                        <field name="school_course" />
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="view_hr_schooling_relation_form" model="ir.ui.view">
+            <field name="name">hr.schooling.relation.form</field>
+            <field name="model">hr.schooling.relation</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Relação de Escolas e Cursos">
+                        <field name="school" />
+                        <field name="course" />
+                        <field name="data_inicio" />
+                        <field name="data_fim" />
+                        <field name="duracao" />
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_schooling_relation_tree" model="ir.ui.view">
+            <field name="name">hr.schooling.relation.tree</field>
+            <field name="model">hr.schooling.relation</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="school" />
+                        <field name="course" />
+                        <field name="data_inicio" />
+                        <field name="data_fim" />
+                        <field name="duracao" />
+                </tree>
+            </field>
+        </record>
+
+
+       
+        <!-- Criar ações para os modelos Escola e Curso reloacionados a menu -->
+        <record id="open_view_school_form" model="ir.actions.act_window">
+            <field name="name">Schools</field>
+            <field name="res_model">hr.schooling.school</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="open_view_school_tree" model="ir.actions.act_window">
+            <field name="name">Tree</field>
+            <field name="res_model">hr.schooling.school</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="open_view_course_form" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">hr.schooling.course</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="open_view_course_tree" model="ir.actions.act_window">
+            <field name="name">Tree</field>
+            <field name="res_model">hr.schooling.course</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <!-- Adiciona menu Schools ao menu superior Schooling -->
+        <menuitem id="menu_hr_schooling_school" name="Schools" parent="menu_hr_schooling"  action="open_view_school_form"/>
+
+        <!-- Adiciona menu Course ao menu superior Schooling -->
+        <menuitem id="menu_hr_schooling_course" name="Courses" parent="menu_hr_schooling" action="open_view_course_form"/>
+    </data>
+</openerp>

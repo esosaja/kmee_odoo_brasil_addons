@@ -1,0 +1,753 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mono_rh
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1-1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-02 18:20+0000\n"
+"PO-Revision-Date: 2013-01-02 18:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mono_rh
+#: field:hr.employee,cpf:0
+msgid "CPF"
+msgstr "CPF"
+
+#. module: mono_rh
+#: field:hr.schooling.course,name:0
+msgid "Course Name"
+msgstr "Nome do Curso"
+
+#. module: mono_rh
+#: field:hr.post.category,description:0
+msgid "Post Category Description"
+msgstr "Descrição da Categoria"
+
+#. module: mono_rh
+#: constraint:hr.employee:0
+msgid "CPF invalido!"
+msgstr "CPF inválido!"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_schooling_course
+msgid "Schooling Course"
+msgstr "Curso"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.titulo,titulo_id:0
+msgid "ID Titulo"
+msgstr "Referência"
+
+#. module: mono_rh
+#: field:hr.employee,nome_pai:0
+msgid "Nome do pai"
+msgstr "Nome do Pai"
+
+#. module: mono_rh
+#: field:hr.post.post,cbo:0
+msgid "CBO Code"
+msgstr "Código CBO"
+
+#. module: mono_rh
+#: field:hr.employee,orgao_exp_rg_extr:0
+msgid "Orgao Emissao"
+msgstr "Orgão Emissão"
+
+#. module: mono_rh
+#: field:hr.employee,idade:0
+#: field:hr.employee.br.dependentes,idade:0
+msgid "Idade"
+msgstr "Idade"
+
+#. module: mono_rh
+#: field:hr.schooling.relation,data_fim:0
+msgid "Data do Término"
+msgstr "Data do Término"
+
+#. module: mono_rh
+#: field:hr.schooling.school,name:0
+msgid "School Name"
+msgstr "Nome da Escola"
+
+#. module: mono_rh
+#: field:hr.employee,rg:0
+msgid "RG"
+msgstr "RG"
+
+#. module: mono_rh
+#: field:hr.employee,pis:0
+msgid "PIS"
+msgstr "PIS"
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Outros"
+msgstr "Outros"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_employee_br_documentos_ctps_atualizacao
+msgid "CTPS atualizacao"
+msgstr "CTPS atualização"
+
+#. module: mono_rh
+#: field:hr.employee.br.dependentes,data_nascimento:0
+msgid "Data de Nascimento"
+msgstr "Data de Nascimento"
+
+#. module: mono_rh
+#: field:hr.benefits.br,value:0
+msgid "Value"
+msgstr "Valor"
+
+#. module: mono_rh
+#: field:hr.schooling.relation,data_inicio:0
+msgid "Data de Início"
+msgstr "Data de Início"
+
+#. module: mono_rh
+#: field:hr.employee.br.friend.contact,relacionamento:0
+msgid "Relacionamento"
+msgstr "Relacionamento"
+
+#. module: mono_rh
+#: field:hr.benefits.br,benefit_id:0
+msgid "Reference"
+msgstr "Referência"
+
+#. module: mono_rh
+#: sql_constraint:res.partner:0
+msgid "Já existe um parceiro cadastrado com esta Inscrição Estadual/RG !"
+msgstr "Já existe um parceiro cadastrado com esta Inscrição Estadual/RG !"
+
+#. module: mono_rh
+#: view:hr.benefits.br:0
+msgid "Tax"
+msgstr "Impostos"
+
+#. module: mono_rh
+#: field:hr.schooling.course,description:0
+msgid "Decription"
+msgstr "Decrição"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_res_partner
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_schooling_relation
+msgid "Employee School"
+msgstr "Escola do Colaborador"
+
+#. module: mono_rh
+#: field:hr.employee,ctps:0
+#: view:hr.employee.br.documentos.ctps:0
+#: model:ir.model,name:mono_rh.model_hr_employee_br_documentos_ctps
+msgid "CTPS"
+msgstr "CTPS"
+
+#. module: mono_rh
+#: view:hr.employee:0
+msgid "Social IDs"
+msgstr "IDs Sociais"
+
+#. module: mono_rh
+#: field:hr.employee.br.dependentes,name:0
+#: field:hr.employee.br.friend.contact,name:0
+#: field:hr.sst.pele,name:0
+#: field:hr.sst.tipo.sanguineo,name:0
+msgid "Nome"
+msgstr "Nome"
+
+#. module: mono_rh
+#: view:hr.employee:0
+#: view:hr.schooling.course:0
+#: field:hr.schooling.relation,school:0
+#: view:hr.schooling.school:0
+#: model:ir.model,name:mono_rh.model_hr_schooling_school
+msgid "School"
+msgstr "Escola"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_job
+msgid "Job Description"
+msgstr "Descrição da função"
+
+#. module: mono_rh
+#: field:hr.schooling.school,state_id:0
+msgid "State"
+msgstr "Estado"
+
+#. module: mono_rh
+#: field:hr.employee.br.friend.contact,telefone:0
+msgid "Telefone"
+msgstr "Telefone"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_employee
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_employee_br_documentos_titulo
+msgid "Titulo"
+msgstr "Título de Eleitor"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.ctps.atualizacao,descricao:0
+msgid "Descricao"
+msgstr "Descrição"
+
+#. module: mono_rh
+#: view:hr.employee.br.friend.contact:0
+msgid "Contatos"
+msgstr "Contatos"
+
+#. module: mono_rh
+#: view:hr.schooling.course:0
+#: field:hr.schooling.relation,course:0
+msgid "Course"
+msgstr "Curso"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_syndicate_br_reg
+msgid "hr.syndicate.br.reg"
+msgstr "hr.syndicate.br.reg"
+
+#. module: mono_rh
+#: field:hr.employee,dependentes:0
+#: view:hr.employee.br.dependentes:0
+#: model:ir.model,name:mono_rh.model_hr_employee_br_dependentes
+msgid "Dependentes"
+msgstr "Dependentes"
+
+#. module: mono_rh
+#: field:hr.contract.wage,date_registry:0
+msgid "Date of Registry"
+msgstr "Data de Registro"
+
+#. module: mono_rh
+#: help:res.partner,syndicate:0
+msgid "Check this box if the partner is a syndicate."
+msgstr "Selecione este campo de o Parceiro é Sindicato."
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Sobrinho(a)"
+msgstr "Sobrinho(a)"
+
+#. module: mono_rh
+#: view:hr.employee:0
+msgid "Órgão Expedidor"
+msgstr "Órgão Expedidor"
+
+#. module: mono_rh
+#: field:hr.post.post,description:0
+msgid "Post Description"
+msgstr "Descrição do Cargo"
+
+#. module: mono_rh
+#: view:hr.employee.br.friend.contact:0
+#: model:ir.model,name:mono_rh.model_hr_employee_br_friend_contact
+msgid "Friend Contact"
+msgstr "Contato de Amigos"
+
+#. module: mono_rh
+#: field:hr.employee.br.dependentes,pensao:0
+msgid "Pensão?"
+msgstr "Pensão?"
+
+#. module: mono_rh
+#: sql_constraint:hr.employee:0
+msgid "Já existe um colaborador cadastrado com este CPF!"
+msgstr "Já existe um colaborador cadastrado com este CPF!"
+
+#. module: mono_rh
+#: field:hr.employee,orgao_exp_rg:0
+msgid "Orgao Expedidor"
+msgstr "Órgao Expedidor"
+
+#. module: mono_rh
+#: model:ir.actions.act_window,name:mono_rh.open_view_benefits_tree
+#: model:ir.actions.act_window,name:mono_rh.open_view_course_tree
+#: model:ir.actions.act_window,name:mono_rh.open_view_post_tree
+#: model:ir.actions.act_window,name:mono_rh.open_view_school_tree
+msgid "Tree"
+msgstr "Árvore"
+
+#. module: mono_rh
+#: field:hr.employee,friend_contact:0
+msgid "Contato"
+msgstr "Contato"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_contract_wage
+msgid "Wages for Contract"
+msgstr "Salários por Contrato"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_benefits_br
+msgid "Employee Benefits"
+msgstr "Benefícios do Colaborador"
+
+#. module: mono_rh
+#: sql_constraint:res.partner:0
+msgid "Já existe um parceiro cadastrado com este CPF/CNPJ !"
+msgstr "Já existe um parceiro cadastrado com este CPF/CNPJ !"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.titulo,name:0
+msgid "Numero do Titulo"
+msgstr "Número do Titulo"
+
+#. module: mono_rh
+#: field:hr.employee,cor_pele:0
+msgid "Cor da pele"
+msgstr "Cor da Pele"
+
+#. module: mono_rh
+#: field:hr.employee,peso:0
+msgid "Peso"
+msgstr "Peso"
+
+#. module: mono_rh
+#: constraint:hr.contract:0
+msgid "Error! contract start-date must be lower then contract end-date."
+msgstr "Erro! A data de início do contrato precisa ser menor que a data de término do contrato."
+
+#. module: mono_rh
+#: field:hr.employee,employee_altura:0
+msgid "Altura"
+msgstr "Altura"
+
+#. module: mono_rh
+#: view:hr.employee:0
+msgid "SST"
+msgstr "SST"
+
+#. module: mono_rh
+#: field:hr.employee,anexos:0
+msgid "Anexos"
+msgstr "Anexos"
+
+#. module: mono_rh
+#: view:hr.post.cbo:0
+#: model:ir.actions.act_window,name:mono_rh.open_view_post_cbo_form
+#: model:ir.actions.act_window,name:mono_rh.open_view_post_cbo_tree
+#: model:ir.ui.menu,name:mono_rh.menu_hr_post_cbo
+#: model:ir.ui.menu,name:mono_rh.menu_view_post_cbo_form
+msgid "CBO"
+msgstr "CBO"
+
+#. module: mono_rh
+#: field:hr.employee,numero_calcado:0
+msgid "Numero do calcado"
+msgstr "Número do Calçado"
+
+#. module: mono_rh
+#: view:hr.employee:0
+msgid "Estrangeiro?"
+msgstr "Estrangeiro?"
+
+#. module: mono_rh
+#: field:hr.employee,tipo_sanguineo:0
+#: model:ir.model,name:mono_rh.model_hr_sst_tipo_sanguineo
+msgid "Tipo Sanguineo"
+msgstr "Tipo Sanguineo"
+
+#. module: mono_rh
+#: view:hr.post.category:0
+#: field:hr.post.post,category:0
+#: model:ir.ui.menu,name:mono_rh.menu_hr_post_category
+msgid "Category"
+msgstr "Categoria"
+
+#. module: mono_rh
+#: field:hr.benefits.br,tax_ids:0
+msgid "Default Taxes"
+msgstr "Impostos Padrões"
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Mãe"
+msgstr "Mãe"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.titulo,zona:0
+msgid "Zona"
+msgstr "Zona"
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Filho(a)"
+msgstr "Filho(a)"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_post_cbo
+msgid "Brazilian Classification of Occupation"
+msgstr "Brazilian Classification of Occupation"
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Tio(a)"
+msgstr "Tio(a)"
+
+#. module: mono_rh
+#: field:hr.employee,sexo:0
+msgid "Sexo"
+msgstr "Sexo"
+
+#. module: mono_rh
+#: view:hr.schooling.relation:0
+msgid "Relação de Escolas e Cursos"
+msgstr "Relação de Escolas e Cursos"
+
+#. module: mono_rh
+#: constraint:res.partner:0
+msgid "CNPJ/CPF invalido!"
+msgstr "CNPJ/CPF inválido!"
+
+#. module: mono_rh
+#: view:hr.employee:0
+#: field:hr.employee,rg_expedicao:0
+msgid "RG Data Exp."
+msgstr "RG Data Exp."
+
+#. module: mono_rh
+#: field:hr.employee,contact_id:0
+#: field:hr.employee.br.friend.contact,contact_id:0
+msgid "ID Contato"
+msgstr "Referência"
+
+#. module: mono_rh
+#: field:hr.employee.br.dependentes,percentual_pensao:0
+msgid "Percentual da Pensão"
+msgstr "Percentual da Pensão"
+
+#. module: mono_rh
+#: field:hr.employee,data_nascimento:0
+msgid "Data Nascimento"
+msgstr "Data de Nascimento"
+
+#. module: mono_rh
+#: field:hr.syndicate.br.reg,periodo:0
+msgid "Período"
+msgstr "Período"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.ctps,atualizacoes:0
+msgid "Atualizacao CTPS"
+msgstr "Atualizacao CTPS"
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Cônjuge"
+msgstr "Cônjuge"
+
+#. module: mono_rh
+#: view:hr.schooling.school:0
+#: model:ir.actions.act_window,name:mono_rh.open_view_school_form
+#: model:ir.ui.menu,name:mono_rh.menu_hr_schooling_school
+msgid "Schools"
+msgstr "Escolas"
+
+#. module: mono_rh
+#: field:hr.employee,post_employee:0
+#: field:hr.job,post:0
+#: view:hr.post.post:0
+msgid "Post"
+msgstr "Cargo"
+
+#. module: mono_rh
+#: view:hr.employee:0
+msgid "Documentos"
+msgstr "Documentos"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.ctps.atualizacao,data:0
+msgid "Data"
+msgstr "Data"
+
+#. module: mono_rh
+#: constraint:hr.employee:0
+msgid "Error ! You cannot create recursive Hierarchy of Employees."
+msgstr "Erro! Voce não pode criar uma hierarquia de empregados recursiva."
+
+#. module: mono_rh
+#: field:hr.employee,naturalidade_employee:0
+msgid "Naturalidade"
+msgstr "Naturalidade"
+
+#. module: mono_rh
+#: view:hr.benefits.br:0
+#: view:hr.employee:0
+#: field:hr.employee,benefit_ids:0
+#: model:ir.actions.act_window,name:mono_rh.open_view_benefits_form
+#: model:ir.ui.menu,name:mono_rh.menu_hr_benefits_br
+#: model:ir.ui.menu,name:mono_rh.menu_view_benefits_benefits_form
+msgid "Benefits"
+msgstr "Benefícios"
+
+#. module: mono_rh
+#: field:hr.employee.br.dependentes,tipo:0
+msgid "Tipo de Dependente"
+msgstr "Tipo de Dependente"
+
+#. module: mono_rh
+#: field:hr.employee,nome_cracha:0
+msgid "Nome do cracha"
+msgstr "Nome do Crachá"
+
+#. module: mono_rh
+#: field:hr.post.post,post_salary:0
+msgid "Post Salary"
+msgstr "Salário"
+
+#. module: mono_rh
+#: model:ir.actions.act_window,name:mono_rh.open_view_post_form
+#: model:ir.ui.menu,name:mono_rh.menu_hr_post_post
+#: model:ir.ui.menu,name:mono_rh.menu_hr_post_post_form
+msgid "Posts"
+msgstr "Cargos"
+
+#. module: mono_rh
+#: view:hr.employee.br.documentos.ctps.atualizacao:0
+msgid "Atualização da CTPS"
+msgstr "Atualização da CTPS"
+
+#. module: mono_rh
+#: field:hr.post.category,name:0
+#: model:ir.actions.act_window,name:mono_rh.open_view_post_category_form
+#: model:ir.actions.act_window,name:mono_rh.open_view_post_category_tree
+#: model:ir.ui.menu,name:mono_rh.menu_view_post_category_form
+msgid "Post Category"
+msgstr "Categoria de Cargos"
+
+#. module: mono_rh
+#: view:hr.schooling.course:0
+#: model:ir.actions.act_window,name:mono_rh.open_view_course_form
+#: model:ir.ui.menu,name:mono_rh.menu_hr_schooling_course
+msgid "Courses"
+msgstr "Curso"
+
+#. module: mono_rh
+#: field:hr.benefits.br,name:0
+msgid "Benefit"
+msgstr "Benefícios"
+
+#. module: mono_rh
+#: field:hr.employee,titulo_eleitor:0
+#: view:hr.employee.br.documentos.titulo:0
+msgid "Titulo de Eleitor"
+msgstr "Titulo de Eleitor"
+
+#. module: mono_rh
+#: field:hr.employee,nome_mae:0
+msgid "Nome da mae"
+msgstr "Nome da mãe"
+
+#. module: mono_rh
+#: field:hr.employee,estado_civil:0
+msgid "Estado Civil"
+msgstr "Estado Civil"
+
+#. module: mono_rh
+#: field:hr.employee,reservista:0
+msgid "Reservista"
+msgstr "Reservista"
+
+#. module: mono_rh
+#: view:hr.employee:0
+#: field:hr.employee,syndicate_rel:0
+#: field:hr.syndicate.br.reg,syndicate_opt:0
+#: field:res.partner,syndicate:0
+msgid "Sindicato"
+msgstr "Sindicato"
+
+#. module: mono_rh
+#: field:hr.post.cbo,code:0
+msgid "Code"
+msgstr "Code"
+
+#. module: mono_rh
+#: field:hr.employee,passaport:0
+msgid "Passaport"
+msgstr "Passaport"
+
+#. module: mono_rh
+#: field:hr.employee,state_id3:0
+msgid "Estado"
+msgstr "Estado"
+
+#. module: mono_rh
+#: field:hr.employee,country_id3:0
+msgid "Nacionalidade"
+msgstr "Nacionalidade"
+
+#. module: mono_rh
+#: field:hr.employee,conjuge:0
+msgid "Conjuge"
+msgstr "Conjuge"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_post_post
+msgid "Human Resources Post"
+msgstr "RH Cargo"
+
+#. module: mono_rh
+#: field:hr.contract.wage,name:0
+msgid "Wage"
+msgstr "Salário"
+
+#. module: mono_rh
+#: field:hr.schooling.school,city_id:0
+msgid "City"
+msgstr "Cidade"
+
+#. module: mono_rh
+#: field:hr.syndicate.br.reg,reference:0
+msgid "Referencia"
+msgstr "Referência"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_post_category
+msgid "Human Resource Post Category"
+msgstr "Human Resource Post Category"
+
+#. module: mono_rh
+#: field:hr.employee,school_course:0
+msgid "School and Course"
+msgstr "Escola e Curso"
+
+#. module: mono_rh
+#: view:hr.post.post:0
+msgid "Details"
+msgstr "Detalhes"
+
+#. module: mono_rh
+#: selection:hr.employee.br.dependentes,tipo:0
+msgid "Pai"
+msgstr "Pai"
+
+#. module: mono_rh
+#: field:hr.employee,rg_estrageiro:0
+msgid "RG Estrageiro"
+msgstr "RG Estrageiro"
+
+#. module: mono_rh
+#: field:hr.schooling.school,description:0
+msgid "Description"
+msgstr "Descrição"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.titulo,secao:0
+msgid "Secao"
+msgstr "Seção"
+
+#. module: mono_rh
+#: view:hr.employee.br.documentos.titulo:0
+msgid "Título de Eleitor"
+msgstr "Título de Eleitor"
+
+#. module: mono_rh
+#: view:hr.employee.br.documentos.ctps.atualizacao:0
+msgid "Atualização CTPS"
+msgstr "Atualização CTPS"
+
+#. module: mono_rh
+#: field:hr.employee,estrangeiro:0
+msgid "Estrageiro"
+msgstr "Estrageiro"
+
+#. module: mono_rh
+#: field:hr.employee,numero_registro:0
+msgid "Numero do Registro"
+msgstr "Numero do Registro"
+
+#. module: mono_rh
+#: field:hr.syndicate.br.reg,importancia:0
+msgid "Importância"
+msgstr "Importância"
+
+#. module: mono_rh
+#: field:hr.post.cbo,name:0
+#: field:hr.post.post,name:0
+msgid "Name"
+msgstr "Nome"
+
+#. module: mono_rh
+#: field:hr.schooling.relation,duracao:0
+msgid "Duração"
+msgstr "Duração"
+
+#. module: mono_rh
+#: view:hr.employee.br.documentos.ctps.atualizacao:0
+msgid "atualizacao"
+msgstr "Atualização"
+
+#. module: mono_rh
+#: view:hr.contract.wage:0
+#: model:ir.model,name:mono_rh.model_hr_contract
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: mono_rh
+#: model:ir.model,name:mono_rh.model_hr_sst_pele
+msgid "SST pele"
+msgstr "SST Pele"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.ctps,name:0
+#: field:hr.sst.tipo.sanguineo,codigo:0
+msgid "Codigo"
+msgstr "Código"
+
+#. module: mono_rh
+#: field:hr.employee.br.dependentes,dependente_id:0
+#: field:hr.employee.br.documentos.ctps.atualizacao,atualizacao_id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mono_rh
+#: field:hr.employee.br.documentos.ctps.atualizacao,empresa:0
+msgid "Empresa"
+msgstr "Empresa"
+
+#. module: mono_rh
+#: view:hr.employee:0
+#: model:ir.ui.menu,name:mono_rh.menu_hr_schooling
+msgid "Schooling"
+msgstr "Escolaridade"
+
+#. module: mono_rh
+#: sql_constraint:hr.job:0
+msgid "The name of the job position must be unique per company!"
+msgstr "O nome do cargo deve ser único por empresa!"
+
+#. module: mono_rh
+#: view:hr.employee:0
+msgid "Outros Dados"
+msgstr "Outros Dados"
+
+#. module: mono_rh
+#: field:hr.employee.br.friend.contact,celular:0
+msgid "Celular"
+msgstr "Celular"
+
+#. module: mono_rh
+#: constraint:res.partner:0
+msgid "Inscrição Estadual inválida!"
+msgstr "Inscrição Estadual inválida!"
+
+#. module: mono_rh
+#: view:hr.contract.wage:0
+msgid "Wages"
+msgstr "Salários"
+
