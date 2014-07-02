@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazillian Human Resources Payroll module for OpenERP
+#    Brazillian Human Resources Employee module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
-#            
+#    @author Rafael da Silva Lima <mileo@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,11 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from osv import fields,osv
 
-class ResCompany(osv.osv):
-    _inherit = 'res.company'
-  
-    _columns = {
-        'check_benefits': fields.boolean('Vale Alimentação e Vale Refeição simultâneos', required=False),
-       }
+from . import hr_employee
+
+
