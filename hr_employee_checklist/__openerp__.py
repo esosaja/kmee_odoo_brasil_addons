@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazillian Human Resources Payroll module for OpenERP
+#    Brazillian Human Resources Employee module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Luis Felipe Mileo <mileo@kmee.com.br>
-#    @author Matheus Lima Felix <matheus.felix@kmee.com.br>
+#    @author Rafael da Silva Lima <mileo@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,4 +20,25 @@
 #
 ##############################################################################
 
-from . import model
+{
+    'name' : 'HR Employee Checklist',
+    'description' : """
+Checklist de documentos dos funcionários""",
+    'category' : 'Localization',
+    'author' : 'KMEE',
+    'maintainer': 'KMEE',
+    'website' : 'http://www.kmee.com.br',
+    'version' : '0.1',
+    'depends' : ['hr','l10n_br','l10n_br_base'],
+    'init_xml': [],
+    'data': [
+             'view/hr_employee_view.xml',
+             ],
+    'update_xml' : [
+    ],
+    'test': [],
+    'installable': True,
+    'images': [],
+    'auto_install': False,
+    'license': 'AGPL-3',
+}

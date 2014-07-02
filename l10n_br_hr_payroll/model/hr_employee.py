@@ -1,13 +1,15 @@
-    # -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2013 - KMEE- Rafael da Silva Lima (<http://www.kmee.com.br>)
-#                              
+#    Brazillian Human Resources Payroll module for OpenERP
+#    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
+#    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
+#            Matheus Felix <matheus.felix@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published
-#    by the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -23,8 +25,9 @@ from osv import fields,osv
 from datetime import datetime
 from openerp.tools import DEFAULT_SERVER_DATE_FORMAT
 
-class HrEmployee(osv.osv):
 
+class HrEmployee(osv.osv):
+     
     def _validate_pis_pasep(self, cr, uid, ids):
         employee = self.browse(cr, uid, ids[0])
 
@@ -60,51 +63,68 @@ class HrEmployee(osv.osv):
         if rest != 0:
             rest = 11 - rest
         return (rest == digits[10])
-
+    
     
     _inherit='hr.employee'
 
     _columns = {
-        'company_id': fields.many2one('res.company', 'Company', required=True),   
         'pis_pasep': fields.char(u'PIS/PASEP', size=15),
         'ctps' : fields.char('CTPS', help='Número da carteira de trabalho profissional de serviço'), 
-        'ctps_serie' : fields.char('Série'),
-        'ctps_data' : fields.date('Data de emissão'),
-        'creservista': fields.char('Certificado de Reservista'),
-        'cr_categ': fields.char('Categoria'),
-        'ginstru': fields.selection([('fundamental_incompleto', 'Ensino fundamental incompleto'), ('fundamental', 'Ensino fundamental completo '),
-                    ('medio_incompleto', 'Ensino médio incompleto'),
-                    ('medio', 'Ensino médio completo'),
-                    ('superior_incompleto', 'Curso superior incompleto'),
-                    ('superior', 'Curso superior completo'),
+        'ctps_series' : fields.char('Série'),
+        'ctps_date' : fields.date('Data de emissão'),
+        'creservist': fields.char('Certificado de Reservista'),
+        'crresv_categ': fields.char('Categoria'),
+        'cr_categ': fields.selection([('estagiario', 'Estagiario'), ('junior', 'Júnior'),
+                                        ('pleno', 'Pleno'), ('sênior', 'Sênior')], 'Categoria'
+                                    , help="Escolha a Categoria de Instrução:"),
+        'ginstru': fields.selection([('fundamental_incompleto', 'Ensino Fundamental Incompleto'), ('fundamental', 'Ensino Fundamental Completo '),
+                    ('medio_incompleto', 'Ensino Médio Incompleto'),
+                    ('medio', 'Ensino Médio Completo'),
+                    ('superior_incompleto', 'Curso Superior Incompleto'),
+                    ('superior', 'Curso Superior Completo'),
                     ('mestrado', 'Mestrado '),
                     ('doutorado', 'Doutorado')], 'Nível de Escolaridade',
                                 help="Escolha o grau de instrução"),
         
-        'nome_conju': fields.char("Nome do Cônjuge"),
-        'tem_filhos': fields.boolean("Possui dependentes"),  
-        
-        'filhos_ids': fields.one2many('hr.employee.childs', 'employee_id', 'Employee'),
-        
-    }
+        'have_dependent': fields.boolean("Associados"),
+        'dependent_ids': fields.one2many('hr.employee.dependent', 'employee_id', 'Employee'),
+        'rg': fields.char('RG', help='Número do RG'),
+        'organ_exp': fields.char("Orgão de Expedição"),
+        'rg_emission': fields.date('Data de Emissão'),
+        'title_voter': fields.char('Título', help='Número do Título Eleitor'),
+        'zone_voter': fields.char('Zona'),
+        'session_voter': fields.date('Seção'),
+        'driver_license': fields.char('Carteira de Motorista', help='Numero da Carteira Motorista'),
+        'driver_categ':fields.char('Categoria'),
+        'father_name': fields.char('Nome do Pai'),
+        'mother_name': fields.char('Nome da Mãe'),
+        'number_dependent': fields.integer("Dependentes"),
+    }    
 
     _constraints = [[_validate_pis_pasep, u'Número PIS/PASEP é inválido.', ['pis_pasep']]] 
     
-class HrEmployeeChilds(osv.Model):
-    _name = 'hr.employee.childs'
-    _description='Employee\'s Childs'
+   
+
+class HrEmployeeDependent(osv.osv):
+    _name = 'hr.employee.dependent'
+    _description='Employee\'s Dependents'
     
     def _check_birth(self, cr, uid, ids, context=None):
         obj = self.browse(cr, uid, ids[0], context=context)
-        if datetime.strptime(obj.filho_idade, DEFAULT_SERVER_DATE_FORMAT).date() > datetime.now().date():
+        if datetime.strptime(obj.dependent_age, DEFAULT_SERVER_DATE_FORMAT).date() > datetime.now().date():
             return False
         return True
-
+    
+     
     _columns = {
         'employee_id' : fields.many2one('hr.employee', 'Employee'),
-        'filho_nome' : fields.char('Name', size=64, required=True, translate=True),
-        'filho_idade' : fields.date('Birthday', required=True, translate=True),
-        'disable_children': fields.boolean('Deficiente')
-        }
-
-    _constraints = [[_check_birth, u'Data de Nascimento está no futuro!', ['filho_idade']]] 
+        'dependent_name' : fields.char('Name', size=64, required=True, translate=True),
+        'dependent_age' : fields.date('Data de Nascimento', required=True),
+        'dependent_type': fields.char('Tipo do Associoado', required=True),
+        'pension_benefits': fields.float('Pensão Alimenticia'),
+        'dependent_verification': fields.boolean('É dependente', required=False),
+        'health_verification': fields.boolean('Plano de Saúde', required=False),
+       }
+    
+    _constraints = [[_check_birth, u'Data de Nascimento está no futuro!', ['dependent_age']]] 
+    
