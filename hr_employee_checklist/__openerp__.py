@@ -21,9 +21,9 @@
 ##############################################################################
 
 {
-    'name' : 'HR Fiveacts',
+    'name' : 'HR Employee Checklist',
     'description' : """
-Módulo de customização de recursos humanos Fiveacts""",
+Checklist de documentos dos funcionários""",
     'category' : 'Localization',
     'author' : 'KMEE',
     'maintainer': 'KMEE',
