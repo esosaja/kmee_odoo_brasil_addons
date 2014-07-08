@@ -1,0 +1,403 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* l10n_br_hr_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-07 14:18+0000\n"
+"PO-Revision-Date: 2014-07-07 14:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_br_hr_payroll
+#: constraint:hr.contract:0
+msgid "The company settings do not allow the use of food voucher and simultaneous meal"
+msgstr "As configurações da empresa não permitem o uso de vale alimentação e refeição simultâneos"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,have_dependent:0
+msgid "Associated"
+msgstr "Associados"
+
+#. module: l10n_br_hr_payroll
+#: model:ir.model,name:l10n_br_hr_payroll.model_l10n_br_hr_cbo
+msgid "Brazilian Classification of Occupation"
+msgstr "Classificação Brasileira de Ocupação"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.job,cbo_id:0
+msgid "CBO"
+msgstr "CBO"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+#: field:hr.employee,ctps:0
+msgid "CTPS"
+msgstr "CTPS"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+#: field:hr.employee,driver_license:0
+msgid "Driver License"
+msgstr "Carteira de Motorista"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,cr_categ:0
+#: field:hr.employee,crresv_categ:0
+#: field:hr.employee,driver_categ:0
+msgid "Categoria"
+msgstr "Categoria"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,creservist:0
+msgid "Certificado de Reservista"
+msgstr "Certificado de Reservista"
+
+#. module: l10n_br_hr_payroll
+#: field:l10n_br_hr.cbo,code:0
+msgid "Code"
+msgstr "Code"
+
+#. module: l10n_br_hr_payroll
+#: model:ir.model,name:l10n_br_hr_payroll.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: l10n_br_hr_payroll
+#: view:res.company:0
+msgid "Configuration"
+msgstr "Configuração"
+
+#. module: l10n_br_hr_payroll
+#: model:ir.model,name:l10n_br_hr_payroll.model_hr_contract
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Curso Superior Completo"
+msgstr "Curso Superior Completo"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Curso Superior Incompleto"
+msgstr "Curso Superior Incompleto"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Cônjuge e Dependentes"
+msgstr "Cônjuge e Dependentes"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,rg_emission:0
+msgid "Data de Emissão"
+msgstr "Data de Emissão"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee.dependent,dependent_age:0
+msgid "Data de Nascimento"
+msgstr "Data de Nascimento"
+
+#. module: l10n_br_hr_payroll
+#: constraint:hr.employee.dependent:0
+msgid "Data de Nascimento está no futuro!"
+msgstr "Data de Nascimento está no futuro!"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,ctps_date:0
+msgid "Data de emissão"
+msgstr "Data de emissão"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,number_dependent:0
+msgid "Dependentes"
+msgstr "Dependentes"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Documentos"
+msgstr "Documentos"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Doutorado"
+msgstr "Doutorado"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,dependent_ids:0
+#: field:hr.employee.dependent,employee_id:0
+#: model:ir.model,name:l10n_br_hr_payroll.model_hr_employee
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: l10n_br_hr_payroll
+#: model:ir.model,name:l10n_br_hr_payroll.model_hr_employee_dependent
+msgid "Employee's Dependents"
+msgstr "Employee's Dependents"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Ensino Fundamental Completo "
+msgstr "Ensino Fundamental Completo "
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Ensino Fundamental Incompleto"
+msgstr "Ensino Fundamental Incompleto"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Ensino Médio Completo"
+msgstr "Ensino Médio Completo"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Ensino Médio Incompleto"
+msgstr "Ensino Médio Incompleto"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.employee,cr_categ:0
+msgid "Escolha a Categoria de Instrução:"
+msgstr "Escolha a Categoria de Instrução:"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.employee,ginstru:0
+msgid "Escolha o grau de instrução"
+msgstr "Escolha o grau de instrução"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,cr_categ:0
+msgid "Estagiario"
+msgstr "Estagiario"
+
+#. module: l10n_br_hr_payroll
+#: view:res.company:0
+msgid "HR"
+msgstr "HR"
+
+#. module: l10n_br_hr_payroll
+#: model:ir.model,name:l10n_br_hr_payroll.model_hr_job
+msgid "Job Description"
+msgstr "Descrição da função"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,cr_categ:0
+msgid "Júnior"
+msgstr "Júnior"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,ginstru:0
+msgid "Mestrado "
+msgstr "Mestrado "
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee.dependent,dependent_name:0
+#: field:l10n_br_hr.cbo,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,mother_name:0
+msgid "Nome da Mãe"
+msgstr "Nome da Mãe"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,father_name:0
+msgid "Nome do Pai"
+msgstr "Nome do Pai"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Nome dos Pais"
+msgstr "Nome dos Pais"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.employee,driver_license:0
+msgid "Numero da Carteira Motorista"
+msgstr "Numero da Carteira Motorista"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,ginstru:0
+msgid "Nível de Escolaridade"
+msgstr "Nível de Escolaridade"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Número"
+msgstr "Número"
+
+#. module: l10n_br_hr_payroll
+#: constraint:hr.employee:0
+msgid "Número PIS/PASEP é inválido."
+msgstr "Número PIS/PASEP é inválido."
+
+#. module: l10n_br_hr_payroll
+#: help:hr.employee,ctps:0
+msgid "Número da carteira de trabalho profissional de serviço"
+msgstr "Número da carteira de trabalho profissional de serviço"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.employee,rg:0
+msgid "Número do RG"
+msgstr "Número do RG"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.employee,title_voter:0
+msgid "Número do Título Eleitor"
+msgstr "Número do Título Eleitor"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,organ_exp:0
+msgid "Orgão de Expedição"
+msgstr "Orgão de Expedição"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+#: field:hr.employee,pis_pasep:0
+msgid "PIS/PASEP"
+msgstr "PIS/PASEP"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee.dependent,pension_benefits:0
+msgid "Pensão Alimenticia"
+msgstr "Pensão Alimenticia"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee.dependent,health_verification:0
+msgid "Plano de Saúde"
+msgstr "Plano de Saúde"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,health_insurance_dependent:0
+msgid "Plano de Saúde do Dependente"
+msgstr "Plano de Saúde do Dependente"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,health_insurance_father:0
+msgid "Plano de Saúde do Empregado"
+msgstr "Plano de Saúde do Empregado"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.contract,health_insurance_father:0
+msgid "Plano de Saúde do Funcionário"
+msgstr "Plano de Saúde do Funcionário"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.contract,health_insurance_dependent:0
+msgid "Plano de Saúde para os Cônjugues e Dependentes"
+msgstr "Plano de Saúde para os Cônjugues e Dependentes"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,cr_categ:0
+msgid "Pleno"
+msgstr "Pleno"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.contract,transportation_voucher:0
+msgid "Porcentagem de desconto mensal"
+msgstr "Porcentagem de desconto mensal"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+#: field:hr.employee,rg:0
+msgid "RG"
+msgstr "RG"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Realização do Exame Médico"
+msgstr "Realização do Exame Médico"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Reservista"
+msgstr "Reservista"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,session_voter:0
+msgid "Seção"
+msgstr "Seção"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,ctps_series:0
+msgid "Série"
+msgstr "Série"
+
+#. module: l10n_br_hr_payroll
+#: selection:hr.employee,cr_categ:0
+msgid "Sênior"
+msgstr "Sênior"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee.dependent,dependent_type:0
+msgid "Tipo do Associoado"
+msgstr "Tipo do Associoado"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,title_voter:0
+msgid "Título"
+msgstr "Título"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "Título de Eleitor"
+msgstr "Título de Eleitor"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,value_va:0
+msgid "Vale Alimentação"
+msgstr "Vale Alimentação"
+
+#. module: l10n_br_hr_payroll
+#: field:res.company,check_benefits:0
+msgid "Vale Alimentação e Vale Refeição simultâneos"
+msgstr "Vale Alimentação e Vale Refeição simultâneos"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,value_vr:0
+msgid "Vale Refeição"
+msgstr "Vale Refeição"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,transportation_voucher:0
+msgid "Vale Transporte"
+msgstr "Vale Transporte"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,validade:0
+msgid "Validade"
+msgstr "Validade"
+
+#. module: l10n_br_hr_payroll
+#: help:hr.contract,value_va:0
+#: help:hr.contract,value_vr:0
+msgid "Valor Diário do Benefício"
+msgstr "Valor Diário do Benefício"
+
+#. module: l10n_br_hr_payroll
+#: view:hr.employee:0
+msgid "XXX.XXXXX.XX-X"
+msgstr "XXX.XXXXX.XX-X"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee,zone_voter:0
+msgid "Zona"
+msgstr "Zona"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,calc_date:0
+#: field:hr.contract,workeddays:0
+msgid "unknown"
+msgstr "unknown"
+
+#. module: l10n_br_hr_payroll
+#: field:hr.employee.dependent,dependent_verification:0
+msgid "É dependente"
+msgstr "É dependente"
+
