@@ -1,0 +1,43 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* timesheet_task
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-16 15:24+0000\n"
+"PO-Revision-Date: 2014-07-16 15:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: timesheet_task
+#: constraint:account.analytic.line:0
+msgid "Error! Task must belong to the project."
+msgstr "Error! Task must belong to the project."
+
+#. module: timesheet_task
+#: model:ir.model,name:timesheet_task.model_hr_analytic_timesheet
+msgid "Timesheet Line"
+msgstr "Linha da Planilha de Horas"
+
+#. module: timesheet_task
+#: field:hr.analytic.timesheet,hr_analytic_timesheet_id:0
+msgid "Related Timeline Id"
+msgstr "Related Timeline Id"
+
+#. module: timesheet_task
+#: field:account.analytic.line,task_id:0
+#: model:ir.model,name:timesheet_task.model_project_task
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: timesheet_task
+#: model:ir.model,name:timesheet_task.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Linha Analítica"
+
