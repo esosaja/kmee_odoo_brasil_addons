@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Visão de Teste para o XML do Mês -->
+		<record id="validate_xml_to_zip_view" model="ir.ui.view">
+			<field name="name">Check Folder Date</field>
+			<field name="model">validate_xml_to_zip</field>
+			<field name="arch" type="xml">
+				<form string="Check Folder Date" version="7.0">
+					<field invisible="1" name="state"/>	
+					<field invisible="1" name="zip_name"/>
+					<group>
+						<group states="init" string="Definição do Período">
+							<field name="period_start_id" />
+							<field name="period_finish_id" />
+							<field name="zip_get" invisible="1"/>							
+							<button name="zip_get" string="Zip File" type="object" class="oe_highlight" />									
+						</group>
+						<group states="done" string="Download do Arquivo">
+							<button name="zip_get" string="Zip File" type="object" class="oe_highlight" />
+							<field name="zip_get" colspan="4" filename="zip_file"/>
+						</group>
+					</group>
+					<group><footer states="init">
+						<button name="export" string="Export Zip File" type="object" class="oe_highlight" /> ou
+						<button special="cancel" string="Cancel" type="object" class="oe_link"/>							
+					</footer></group>
+					<footer states="done">
+						<button special="cancel" string="Close" type="object"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_kmee_nfe_extended" model="ir.actions.act_window">
+			<field name="name">Check Folder Date</field>
+			<field name="res_model">validate_xml_to_zip</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<act_window id="account_xml_date" key2="client_action_multi"
+			name="Check Folder Date" res_model="validate_xml_to_zip"
+			src_model="account.invoice" view_id="validate_xml_to_zip_view"
+			view_mode="form" target="new" view_type="form" />
+
+	</data>
+</openerp>

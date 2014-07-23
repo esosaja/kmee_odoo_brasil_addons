@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="validate_xml_to_zip_form" model="ir.ui.view">
+			<field name="name">validate_nfe_date_form</field>
+			<field name="model">validate_xml_to_zip</field>
+			<field name="inherit_id" ref="validate_xml_to_zip_view"/>
+			<field name="arch" type="xml">
+				<field name="period_start_id" position="before">
+					<field name="Teste" invisible="1"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="validate_xml_to_zip_form_action" model="ir.actions.act_window">
+			<field name="name">Check Date</field>
+			<field name="res_model">validate_xml_to_zip</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="validate_xml_to_zip_form"/>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_validate_folder_date" name="XML to ZIP" parent="account.menu_finance_periodical_processing" sequence="1" />
+		<menuitem id="menu_validate_folder_date_form" name="Check Folder Date" action="validate_xml_to_zip_form_action" parent="menu_validate_folder_date" sequence="20" />
+
+
+	</data>
+</openerp>
