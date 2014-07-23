@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    KMEE Nfe Extended module for OpenERP
+#    KMEE XML to ZIP module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
 #    @author Matheus Lima Felix <matheus.felix@kmee.com.br>
 #
