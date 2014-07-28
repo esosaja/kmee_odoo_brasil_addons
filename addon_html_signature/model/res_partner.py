@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazilian Sale Order Taxes  module for OpenERP
+#    KMEE Addon HTML Signature  module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
 #    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
 #   
@@ -20,5 +20,16 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import mail_followers
-from . import res_partner
+from openerp.osv import osv
+
+class ResPartner(osv.AbstractModel):
+    #FIXIT: class contact_mixin_methods(osv.AbstractModel):
+    #           _name = 'res.contact.mixin.methods'
+    #  Não sobreescreve , verificar a herença de osv.AbstractModel
+    # Arquivo addons/base/res/res_partner.py linha 171
+    _inherit = "res.contact.mixin.methods"
+    
+    def onchange_contact_mixin(self, cr, uid, ids, contact_id, partner_id, context=None):
+        res = super(ResPartner, self).onchange_contact_mixin(cr, uid, ids, contact_id, partner_id, context)
+        print res
+        return {'value': {'partner_id': contact_id}}
