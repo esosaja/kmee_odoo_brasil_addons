@@ -85,7 +85,7 @@ class mail_notification(orm.Model):
         if msg.parent_id:
             references = msg.parent_id.message_id
 
-        reply_to = '%s@%s' % (msg.author_id.user_ids[0].alias_name, msg.author_id.user_ids[0].alias_domain)
+        reply_to = '%s <%s@%s>' % (msg.author_id.name, msg.author_id.user_ids[0].alias_name, msg.author_id.user_ids[0].alias_domain)
 
         mail_values = {
             'mail_message_id': msg.id,
