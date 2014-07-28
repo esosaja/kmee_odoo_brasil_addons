@@ -36,7 +36,8 @@ for OpenERP 7.0
     """,
     'website': 'http://www.kmee.com.br',
     "depends" : [
-        "email_template_attachment"
+        "email_template_attachment",
+        "mail"
 	],
     'init_xml': [],
     'update_xml': [
