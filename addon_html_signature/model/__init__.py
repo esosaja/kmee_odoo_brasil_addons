@@ -21,4 +21,3 @@
 #
 ##############################################################################
 from . import mail_followers
-from . import res_partner

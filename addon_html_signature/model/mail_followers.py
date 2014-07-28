@@ -101,26 +101,4 @@ class mail_notification(orm.Model):
         except Exception:
             return False
 
-class MailMail(orm.Model):
-
-    _inherit = 'mail.mail'
-
-    def create(self, cr, uid, values, context=None):
-        print "herdei"
-        if 'notification' not in values and values.get('mail_message_id'):
-            values['notification'] = True
-        # if the context contains 'email_from' key it means that we use a non default alias
-        if context and 'email_from' in context:
-            alias = context['email_from']
-            email_from = '<%s@%s>' % (alias.alias_name, alias.alias_domain)
-            email_from = re.sub('<[^>]+>', email_from, values['email_from'])
-            values.update(email_from=email_from, reply_to=email_from)
-        # Check settings
-        reply, preview = self.pool.get('anybox.email.config.settings').get_settings(cr, uid)
-        if not reply:
-            return super(MailMail, self).create(cr, uid, values, context=context)
-        if 'email_from' in values:
-            values.update(reply_to=values['email_from'])
-        return super(MailMail, self).create(cr, uid, values, context=context)
-
 mail_notification()
