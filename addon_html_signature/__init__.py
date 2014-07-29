@@ -3,7 +3,7 @@
 #
 #    KMEE Addon HTML Signature  module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
+#    @author Rafael Silva Lima <rafael.lima@kmee.com.br>
 #   
 #
 #    This program is free software: you can redistribute it and/or modify

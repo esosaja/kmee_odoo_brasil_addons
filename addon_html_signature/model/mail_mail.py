@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazilian Sale Order Taxes  module for OpenERP
+#    KMEE Addon HTML Signature  module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
 #    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
-#   
+#
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,5 +20,15 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import mail_followers
-from . import mail_mail
+from openerp.osv import orm, fields
+
+class MailMail(orm.Model):
+    """ Sobrescreve para que email_to sempre seja o partner.email  """
+    _inherit = 'mail.mail'
+
+    def send_get_email_dict(self, cr, uid, mail, partner=None, context=None):
+        res = super(MailMail, self).send_get_email_dict(cr, uid, mail, partner, context)
+
+        res['email_to'] = res['email_to'][0].split(' ')[-1:]
+
+        return res

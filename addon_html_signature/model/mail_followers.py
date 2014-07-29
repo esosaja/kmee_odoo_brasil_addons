@@ -74,7 +74,8 @@ class mail_notification(orm.Model):
 
         # email_from: partner-user alias or partner email or mail.message email_from
         if msg.author_id and msg.author_id.user_ids and msg.author_id.user_ids[0].alias_domain and msg.author_id.user_ids[0].alias_name:
-            email_from = '%s <%s@%s>' % (msg.author_id.name, msg.author_id.user_ids[0].alias_name, msg.author_id.user_ids[0].alias_domain)
+            #email_from = '%s <%s@%s>' % (msg.author_id.name, msg.author_id.user_ids[0].alias_name, msg.author_id.user_ids[0].alias_domain)
+            email_from = '%s <%s>' % (msg.author_id.name, msg.author_id.user_ids[0].email)
         elif msg.author_id:
             email_from = '%s <%s>' % (msg.author_id.name, msg.author_id.email)
         else:
@@ -84,12 +85,15 @@ class mail_notification(orm.Model):
         if msg.parent_id:
             references = msg.parent_id.message_id
 
+        reply_to = '%s <%s@%s>' % (msg.author_id.name, msg.author_id.user_ids[0].alias_name, msg.author_id.user_ids[0].alias_domain)
+
         mail_values = {
             'mail_message_id': msg.id,
             'auto_delete': True,
             'body_html': body_html,
             'email_from': email_from,
             'references': references,
+            'reply_to': reply_to,
         }
         email_notif_id = mail_mail.create(cr, uid, mail_values, context=context)
         try:
