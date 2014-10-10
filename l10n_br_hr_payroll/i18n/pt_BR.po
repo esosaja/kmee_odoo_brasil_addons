@@ -15,6 +15,12 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+
+#. module: l10n_br_hr_payroll
+#: field:hr.contract,aditional_benefits:0
+msgid "Aditional Benefits"
+msgstr "Benefício Adicional"
+
 #. module: l10n_br_hr_payroll
 #: constraint:hr.contract:0
 msgid "The company settings do not allow the use of food voucher and simultaneous meal"

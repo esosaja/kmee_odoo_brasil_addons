@@ -121,6 +121,7 @@ class HrContract(orm.Model):
         'transportation_voucher': fields.float('Valley Transportation', help='Percentage of monthly deduction'),  
         'health_insurance_father' : fields.float('Employee Health Plan', help='Health Plan of the Employee'),
         'health_insurance_dependent' : fields.float('Dependent Health Plan', help='Health Plan for Spouse and Dependents'),
+        'aditional_benefits': fields.float('Aditional Benefits', help='Others employee benefits'),
         'calc_date': fields.function(_check_date, type='boolean'),
         'ir_value': fields.function(_get_wage_ir, type="float",digits_compute=dp.get_precision('Payroll')),
         }
