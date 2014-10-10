@@ -21,21 +21,23 @@
 ##############################################################################
 
 {
-    'name' : 'Brazilian Localization HR Payroll',
+    'name' : 'Brazilian Localization HR',
     'description' : """
-Brazilian Localization HT Payroll""",
+Brazilian Localization HR with informations refered to the national context of HR""",
     'category' : 'Localization',
     'author' : 'KMEE',
     'maintainer': 'KMEE',
     'website' : 'http://www.kmee.com.br',
     'version' : '0.1',
-    'depends' : ['hr_payroll', 'hr_contract', 'l10n_br_hr'],
+    'depends' : ['hr','l10n_br_base'],
     'init_xml': [
-            'data/l10n_br_hr_payroll_data.xml',
+            'data/l10n_br_hr.cbo.csv',
                 ],
     'data': [
-             'view/hr_payroll_view.xml',
-             'view/hr_contract_view.xml',
+             'security/ir.model.access.csv',
+             'view/l10n_br_hr_cbo_view.xml',
+             'view/hr_employee_view.xml',
+             'view/hr_job_view.xml',
              ],
     'update_xml' : [
     ],

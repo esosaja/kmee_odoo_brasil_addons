@@ -4,6 +4,7 @@
 #    Brazillian Human Resources Payroll module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
 #    @author Luis Felipe Mileo <mileo@kmee.com.br>
+#    @author Matheus Lima Felix <matheus.felix@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,28 +21,8 @@
 #
 ##############################################################################
 
-{
-    'name' : 'Brazilian Localization HR Payroll',
-    'description' : """
-Brazilian Localization HT Payroll""",
-    'category' : 'Localization',
-    'author' : 'KMEE',
-    'maintainer': 'KMEE',
-    'website' : 'http://www.kmee.com.br',
-    'version' : '0.1',
-    'depends' : ['hr_payroll', 'hr_contract', 'l10n_br_hr'],
-    'init_xml': [
-            'data/l10n_br_hr_payroll_data.xml',
-                ],
-    'data': [
-             'view/hr_payroll_view.xml',
-             'view/hr_contract_view.xml',
-             ],
-    'update_xml' : [
-    ],
-    'test': [],
-    'installable': True,
-    'images': [],
-    'auto_install': False,
-    'license': 'AGPL-3',
-}
+from . import l10n_br_hr_cbo
+from . import hr_employee
+from . import hr_job
+from . import res_company
+
