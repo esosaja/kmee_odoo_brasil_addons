@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2014 KMEE (https://www.kmee.com.br/)
+@author Luis Felipe Mileo <mileo@kmee.com.br>
+The licence is in the file __openerp__.py
+-->
+<openerp>
+	<data>
+        <record id="view_sale_tax_in_price_tax_code_form" model="ir.ui.view">
+            <field name="name">sale_tax_in_price_account.tax.code.form</field>
+            <field name="inherit_id" ref="account.view_tax_code_form"/>
+            <field name="model">account.tax.code</field>
+            <field name="sequence" eval="60"/>
+            <field name="arch" type="xml">
+                <field position="after" name="parent_id">
+					<field name="add_tax_on_sale_price"/>
+			    </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_sale_tax_in_price_tax_form">
+			<field name="name">>sale_tax_in_price_account.tax.form</field>
+			<field name="model">account.tax</field>
+			<field name="inherit_id" ref="account.view_tax_form"/>
+			<field name="arch" type="xml">
+				<field position="after" name="price_include">
+					<field name="add_tax_on_sale_price"/>
+			    </field>
+			</field>
+		</record>
+	</data>
+</openerp>
