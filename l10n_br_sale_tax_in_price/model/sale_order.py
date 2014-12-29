@@ -30,16 +30,19 @@ class SaleOrderLine(orm.Model):
         res = {}
         # This loop generates only 2 queries thanks to browse()!
         for line in self.browse(cr, uid ,ids ,context=context):
-            res[line.id] = line.price_list
+            if line.price_list:
+                res[line.id] = line.price_list
+            else:
+                res[line.id] = line.price_unit
         return res
 
     _columns = {
-        'price_list': fields.float(
-            'List Price',
-            digits_compute=dp.get_precision('Product Price'),
-            readonly=True,
-            states={'draft': [('readonly', False)]}),
-        'price_list_draft': fields.function(
+        # 'price_list': fields.float(
+        #     'List Price',
+        #     digits_compute=dp.get_precision('Product Price'),
+        #     readonly=True,
+        #     states={'draft': [('readonly', False)]}),
+        'price_list': fields.function(
             _price_list, string=u'List Price',
             digits_compute=dp.get_precision('Sale Price'), store=True),
         }
@@ -63,5 +66,5 @@ class SaleOrderLine(orm.Model):
                 if tax.add_tax_on_sale_price:
                     amount += tax.amount
             result['value']['price_unit'] = result['value']['price_unit'] / (1 - amount)
-        result['value']['price_list_draft'] = result['value']['price_list']
+        # result['value']['price_list_draft'] = result['value']['price_list']
         return result

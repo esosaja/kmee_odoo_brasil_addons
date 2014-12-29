@@ -13,8 +13,7 @@ The licence is in the file __openerp__.py
 			<field name="priority">35</field>
 			<field name="arch" type="xml">
 				<xpath expr="//form[@string='Sales Order Lines']/group/group/field[@name='fiscal_position']" position="after">
-					<field name="price_list" invisible="1"/>
-                    <field name="price_list_draft" />
+					<field name="price_list"/>
                 </xpath>
 			</field>
 		</record>
