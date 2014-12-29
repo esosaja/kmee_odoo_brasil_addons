@@ -26,22 +26,17 @@ import openerp.addons.decimal_precision as dp
 class SaleOrderLine(orm.Model):
     _inherit = 'sale.order.line'
 
-    def _price_list(self, cr ,uid ,ids ,field ,arg ,context=None):
+    def _price(self, cr ,uid ,ids ,field ,arg ,context=None):
         res = {}
         # This loop generates only 2 queries thanks to browse()!
         for line in self.browse(cr, uid ,ids ,context=context):
-            res[line.id] = line.price_list
+            res[line.id] = line.price_unit
         return res
 
     _columns = {
-        'price_list': fields.float(
-            'List Price',
-            digits_compute=dp.get_precision('Product Price'),
-            readonly=True,
-            states={'draft': [('readonly', False)]}),
-        'price_list_draft': fields.function(
-            _price_list, string=u'List Price',
-            digits_compute=dp.get_precision('Sale Price'), store=True),
+        'price_unit_draft': fields.function(
+            _price, string=u'Price unit',
+            digits_compute=dp.get_precision('Sale Price')),
         }
 
     def product_id_change(self, cr, uid, ids, pricelist, product, qty=0,
@@ -49,19 +44,10 @@ class SaleOrderLine(orm.Model):
                           partner_id=False, lang=False, update_tax=True,
                           date_order=False, packaging=False,
                           fiscal_position=False, flag=False, context=None):
-        #Force update tax
-        update_tax = True
         result = super(SaleOrderLine, self).product_id_change(
             cr, uid, ids, pricelist, product, qty, uom, qty_uos, uos, name,
             partner_id, lang, update_tax, date_order, packaging,
             fiscal_position, flag, context)
-        result['value']['price_list'] = result['value']['price_unit']
-        if result['value'].has_key('tax_id'):
-            account_tax_obj = self.pool.get('account.tax')
-            amount = 0
-            for tax in account_tax_obj.browse(cr, uid, result['value']['tax_id']):
-                if tax.add_tax_on_sale_price:
-                    amount += tax.amount
-            result['value']['price_unit'] = result['value']['price_unit'] / (1 - amount)
-        result['value']['price_list_draft'] = result['value']['price_list']
+        if result['value'].has_key('price_unit'):
+            result['value']['price_unit_draft'] = result['value']['price_unit']
         return result
