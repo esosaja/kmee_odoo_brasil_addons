@@ -37,11 +37,6 @@ class SaleOrderLine(orm.Model):
         return res
 
     _columns = {
-        # 'price_list': fields.float(
-        #     'List Price',
-        #     digits_compute=dp.get_precision('Product Price'),
-        #     readonly=True,
-        #     states={'draft': [('readonly', False)]}),
         'price_list': fields.function(
             _price_list, string=u'List Price',
             digits_compute=dp.get_precision('Sale Price'), store=True),
@@ -58,7 +53,8 @@ class SaleOrderLine(orm.Model):
             cr, uid, ids, pricelist, product, qty, uom, qty_uos, uos, name,
             partner_id, lang, update_tax, date_order, packaging,
             fiscal_position, flag, context)
-        result['value']['price_list'] = result['value']['price_unit']
+        if result['value'].has_key('price_unit'):
+            result['value']['price_list'] = result['value']['price_unit']
         if result['value'].has_key('tax_id'):
             account_tax_obj = self.pool.get('account.tax')
             amount = 0
@@ -66,5 +62,4 @@ class SaleOrderLine(orm.Model):
                 if tax.add_tax_on_sale_price:
                     amount += tax.amount
             result['value']['price_unit'] = result['value']['price_unit'] / (1 - amount)
-        # result['value']['price_list_draft'] = result['value']['price_list']
         return result
