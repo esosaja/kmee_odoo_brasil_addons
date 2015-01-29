@@ -28,7 +28,7 @@
                 <xpath expr="//field[@name='payment_term']" position="replace">
                 </xpath>
                 <field name="partner_shipping_id" position="after">
-                    <field name="payment_mode_id" attrs="{'required': [('state', 'in', [('draft')])]}" />
+                    <field name="payment_mode_id" string="Modo de Pagamento" attrs="{'required': [('state', 'in', [('draft')])]}" />
                     <field name="payment_term"  attrs="{'required': [('state', 'in', [('draft')])]}" />
                     <field name="invoice_type_id" attrs="{'required': [('state', 'in', [('draft')])]}"/>
 				</field>
