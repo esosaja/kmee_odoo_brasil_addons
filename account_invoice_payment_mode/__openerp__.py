@@ -19,9 +19,7 @@
     'name': 'Account Invoice Payment Mode',
     'version': '1.0',
     'category': 'account',
-    'description': '''
-     This module allows manual change the dates and payment amounts on
-     invoice before being confirmed''',
+    'description': ''' ''',
     'author': 'KMEE',
     'website': 'www.kmee.com.br',
     'depends': [

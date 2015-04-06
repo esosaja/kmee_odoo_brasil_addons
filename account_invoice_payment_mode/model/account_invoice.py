@@ -89,10 +89,10 @@ class AccountInvoice(orm.Model):
                     payment_mode_line_obj.unlink(cr, uid, list_ids,
                                                  context=None)
                 for i in totlines:
-                    aux.append((0, 0, {'date_maturity': i[0],
-                                       # 'percentage': i[1],
-                                       'installment_amount': i[1] * total,
-                                       'total': total}))
+                    aux.append({
+                        'date_maturity': i[0],
+                        'installment_amount': i[1] * total,
+                        'total': total})
 
             res['value']['acc_inv_payment_mode_ids'] = aux
 
