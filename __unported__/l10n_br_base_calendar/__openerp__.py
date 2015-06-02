@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Account Payment Partner module for OpenERP
+#    Brazillian Localization Base Calendar module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Luis Felipe Miléo <mileo@kmee.com.br>
+#    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,23 +20,23 @@
 #
 ##############################################################################
 
-
 {
-    'name': 'Account Payment Boleto on Move Line',
-    'version': '0.1',
-    'category': 'Banking addons',
+    'name' : 'Brazilian Localization for base_calendar ',
+    'description' : """
+Modificação de template de email para o idioma Português - BR""",
+    'category' : 'Localization',
+    'author' : 'KMEE',
+    'maintainer': 'KMEE',
+    'website' : 'http://www.kmee.com.br',
+    'version' : '0.1',
+    'depends' : ['base_calendar'],
+    'init_xml': [],
+    'data': [ ],
+    'update_xml' : [
+    ],
+    'test': [],
+    'installable': False,
+    'images': [],
+    'auto_install': False,
     'license': 'AGPL-3',
-    'summary': 'Adds payment mode boleto on move lines',
-    'description': """ """,
-    'author': 'KMEE',
-    'website': 'http://www.kmee.com.br',
-    'depends': ['account_payment_move_line'],
-    'data': [
-        'view/payment_mode.xml',
-        'view/account_move_line.xml',
-        'report_print_button_view.xml',
-    ],
-    'demo': [
-    ],
-    'active': False,
 }

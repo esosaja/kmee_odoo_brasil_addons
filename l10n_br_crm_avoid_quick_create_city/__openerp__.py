@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazillian Human Resources Payroll module for OpenERP
+#    KMEE Avoid Quick Create City, State and Country module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Luis Felipe Mileo <mileo@kmee.com.br>
+#    @author Matheus Lima Felix <matheus.felix@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,35 +19,23 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
-    'name' : 'Brazilian Localization HR Payroll',
-    'description' : """
-Brazilian Localization HT Payroll""",
-    'category' : 'Localization',
-    'author' : 'KMEE',
-    'maintainer': 'KMEE',
-    'website' : 'http://www.kmee.com.br',
-    'version' : '0.1',
-    'depends' : ['hr_payroll','l10n_br','l10n_br_base'],
-    'init_xml': [
-            'data/l10n_br_hr.cbo.csv',
-            'data/l10n_br_hr_payroll_data.xml',
-            'data/l10n_br_hr_payroll_data_IR_rule.xml'
-                ],
-    'data': [
-             'security/ir.model.access.csv',
-             'view/l10n_br_hr_cbo_view.xml',
-             'view/hr_employee_view.xml',
-             'view/hr_job_view.xml',
-             'view/hr_contract_view.xml',
-             'view/hr_payroll_view.xml',
-             ],
-    'update_xml' : [
+    'name': 'l10n_br_crm Avoid Quick Create City, State and Country',
+    'version': '0.1',
+    'category': 'Generic Modules',
+    'description': """l10n_br_crm Avoid Quick Create City, State and Country""",
+    'author': 'KMEE',
+    'license': 'AGPL-3',
+    'website': 'http://www.kmee.com.br',
+    'depends': [
+        'web_m2x_options',
+        'l10n_br_crm',
     ],
+    'data': [
+        'view/crm_lead_view.xml',
+        ],
+    'demo': [],
     'test': [],
     'installable': True,
-    'images': [],
-    'auto_install': False,
-    'license': 'AGPL-3',
+    'auto_install': True,
 }

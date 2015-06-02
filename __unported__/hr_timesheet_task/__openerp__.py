@@ -1,10 +1,8 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazilian Sale Order Taxes  module for OpenERP
-#    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
-#   
+#    Author: Nicolas Bessi
+#    Copyright 2013 Camptocamp SA
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,27 +18,26 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-{
-    'name' : 'Brazilian Sale Order Taxes',
-    'description' : """
-Module to handle taxes in sale order like IPI, ICMS""",
-    'category' : 'Localization',
-    'author' : 'KMEE',
-    'maintainer': 'KMEE',
-    'website' : 'http://www.kmee.com.br',
-    'version' : '0.1',
-    'depends' : [
-                'l10n_br_sale_tax_in_price',
-                'l10n_br_sale',
-                'sale',
-                ],
-    'data': [
-            'view/l10n_br_sale_tax_view.xml'
-             ],
-    'test': [],
-    'installable': True,
-    'images': [],
-    'auto_install': False,
-    'license': 'AGPL-3',
+{'name' : 'Task in time sheet',
+ 'version' : '0.2',
+ 'author' : 'Camptocamp',
+ 'maintainer': 'Camptocamp - Acsone SA/NV',
+ 'category': 'Human Resources',
+ 'depends' : ['timesheet_task', 'hr_timesheet_sheet'],
+ 'description': """Replace project.task.work items linked to task
+                   with hr.analytic.timesheet""",
+ 'website': 'http://www.camptocamp.com',
+ 'data': ['hr_timesheet_sheet_view.xml', 'hr_analytic_timesheet_view.xml'],
+ 'js' : ['static/src/js/timesheet.js'],
+ 'css': ['static/src/css/timesheet.css',],
+ 'qweb': ['static/src/xml/timesheet.xml'],
+ 'demo': [],
+ 'test': [],
+ 'installable': False,
+ 'images' : [],
+ 'auto_install': False,
+ 'license': 'AGPL-3',
+ 'application': True,
 }
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

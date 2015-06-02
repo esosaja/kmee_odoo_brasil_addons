@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Sale Tax in Price module for OpenERP
-#    Copyright (C) 2014 KMEE (https://www.kmee.com.br).
-#    @author Luis Felipe Mileo <mileo@kmee.com.br>
+#    KMEE Avoid Quick Create City, State and Country module for OpenERP
+#    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
+#    @author Matheus Lima Felix <matheus.felix@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,4 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name': 'Readonly price on sale order',
-    'description': '',
-    'category': 'sale',
-    'license': 'AGPL-3',
-    'author': 'KMEE',
-    'website': 'www.kmee.com.br',
-    'version': '7.0',
-    'depends': ['l10n_br_sale_tax_in_price'],
-    #Vc pode alterar a dependencia para l10n_br_sale_product
-    'data': [
-        'view/sale_order_view.xml',
-        ],
-    'test': [],
-    'demo': [],
-    'installable': True,
-    'active': False,
-}
+

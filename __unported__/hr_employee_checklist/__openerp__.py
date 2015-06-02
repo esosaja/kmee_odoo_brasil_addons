@@ -1,8 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Nicolas Bessi
-#    Copyright 2013 Camptocamp SA
+#    Brazillian Human Resources Employee module for OpenERP
+#    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
+#    @author Rafael da Silva Lima <mileo@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,26 +19,26 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{'name' : 'Task in time sheet',
- 'version' : '0.2',
- 'author' : 'Camptocamp',
- 'maintainer': 'Camptocamp - Acsone SA/NV',
- 'category': 'Human Resources',
- 'depends' : ['timesheet_task', 'hr_timesheet_sheet'],
- 'description': """Replace project.task.work items linked to task
-                   with hr.analytic.timesheet""",
- 'website': 'http://www.camptocamp.com',
- 'data': ['hr_timesheet_sheet_view.xml', 'hr_analytic_timesheet_view.xml'],
- 'js' : ['static/src/js/timesheet.js'],
- 'css': ['static/src/css/timesheet.css',],
- 'qweb': ['static/src/xml/timesheet.xml'],
- 'demo': [],
- 'test': [],
- 'installable': True,
- 'images' : [],
- 'auto_install': False,
- 'license': 'AGPL-3',
- 'application': True,
-}
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+{
+    'name' : 'HR Employee Checklist',
+    'description' : """
+Checklist de documentos dos funcionários""",
+    'category' : 'Localization',
+    'author' : 'KMEE',
+    'maintainer': 'KMEE',
+    'website' : 'http://www.kmee.com.br',
+    'version' : '0.1',
+    'depends' : ['hr','l10n_br','l10n_br_base'],
+    'init_xml': [],
+    'data': [
+             'view/hr_employee_view.xml',
+             ],
+    'update_xml' : [
+    ],
+    'test': [],
+    'installable': False,
+    'images': [],
+    'auto_install': False,
+    'license': 'AGPL-3',
+}

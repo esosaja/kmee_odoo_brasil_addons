@@ -1,11 +1,10 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Brazillian Human Resources Payroll module for OpenERP
-#    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Luis Felipe Mileo <mileo@kmee.com.br>
+#    KMEE, KM Enterprising Engineering
+#    Copyright(C) 2014 - Fernando Marcato Rodrigues (<http://www.kmee.com.br>)
 #
-#    This program is free software: you can redistribute it and/or modify
+#    This program is free software: you can redistribute it and    /or modify
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
 #    License, or (at your option) any later version.
@@ -20,21 +19,22 @@
 #
 ##############################################################################
 {
-    'name': 'Brazilian Localization Purchase Inheritance',
-    'description': 'Brazilian Localization for Purchase Inherit',
-    'license': 'AGPL-3',
-    'category': 'Localisation',
+    'name': u'Sale Order fields position adjust',
+    'version': '1.0',
+    'category': 'Other',
+    'description': u"""Módulo para ajustar as posições dos campos
+    payment_mode_id, fiscal_category_id e fiscal_position para a aba "Itens
+    do Pedido" da view Pedidos de Vendas""",
     'author': 'KMEE',
     'website': 'http://www.kmee.com.br',
-    'version': '7.0',
     'depends': [
-        'purchase',
+        'l10n_br_sale_stock',
+        'account_payment_sale',
+        'sale_journal',
     ],
     'data': [
-        'purchase_view.xml',
+        'view/sale_order_altered_view.xml'
     ],
-    'demo': [
-            ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }

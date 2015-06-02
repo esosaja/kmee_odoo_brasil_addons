@@ -1,9 +1,10 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Brazillian Human Resources Employee module for OpenERP
+#    KMEE Addon HTML Signature  module for OpenERP
 #    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Rafael da Silva Lima <mileo@kmee.com.br>
+#    @author Rafael da Silva Lima <rafael.lima@kmee.com.br>
+#   
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,26 +20,34 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
-    'name' : 'HR Employee Checklist',
-    'description' : """
-Checklist de documentos dos funcionários""",
-    'category' : 'Localization',
-    'author' : 'KMEE',
-    'maintainer': 'KMEE',
-    'website' : 'http://www.kmee.com.br',
-    'version' : '0.1',
-    'depends' : ['hr','l10n_br','l10n_br_base'],
+    "name" : "Addon - HTML Signature",
+    "version" : "1.0",
+    "author" : "KMEE",
+    "category": 'Kmee Addons',
+    'complexity': "easy",
+    "description": """
+KMEE Addon - HTML Signature
+====================================
+This modules enables HTML signature in user preferences
+
+for OpenERP 7.0
+
+    """,
+    'website': 'http://www.kmee.com.br',
+    "depends" : [
+        "email_template_attachment",
+        "mail"
+	],
     'init_xml': [],
-    'data': [
-             'view/hr_employee_view.xml',
-             ],
-    'update_xml' : [
+    'update_xml': [
+    	'view/res_users_view.xml',
     ],
+    'demo_xml': [],
     'test': [],
-    'installable': True,
-    'images': [],
-    'auto_install': False,
-    'license': 'AGPL-3',
+    'application': False,
+    'installable': False,
+    'css': [
+    ],
 }
+

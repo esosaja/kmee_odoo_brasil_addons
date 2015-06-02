@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    KMEE Avoid Quick Create City, State and Country module for OpenERP
-#    Copyright (C) 2014 KMEE (http://www.kmee.com.br)
-#    @author Matheus Lima Felix <matheus.felix@kmee.com.br>
+#    Sale Tax in Price module for OpenERP
+#    Copyright (C) 2014 KMEE (https://www.kmee.com.br).
+#    @author Luis Felipe Mileo <mileo@kmee.com.br>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,23 +20,20 @@
 #
 ##############################################################################
 {
-    'name': 'KMEE Avoid Quick Create City, State and Country',
-    'version': '0.1',
-    'category': 'Generic Modules',
-    'description': """KMEE Avoid Quick Create City, State and Country""",
-    'author': 'KMEE',
+    'name': 'Sale Tax add to sale price',
+    'description': 'Add product tax in sale price on sale orders, use for add icms, pis, cofins to product final price',
+    'category': 'sale',
     'license': 'AGPL-3',
-    'website': 'http://www.kmee.com.br',
-    'depends': [
-        'web_m2x_options',
-        'l10n_br_base',
-        'l10n_br_crm',
-    ],
-    'data': ['view/res_country_view.xml',
-             'view/crm_lead_view.xml',
-    ],
-    'demo': [],
+    'author': 'KMEE',
+    'website': 'www.kmee.com.br',
+    'version': '7.0',
+    'depends': ['sale'],
+    'data': [
+        'view/account_tax_view.xml',
+        'view/sale_order_view.xml',
+        ],
     'test': [],
-    'installable': True,
+    'demo': [],
+    'installable': False,
     'active': False,
 }

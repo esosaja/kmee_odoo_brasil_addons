@@ -20,20 +20,18 @@
 #
 ##############################################################################
 {
-    'name': 'Sale Tax add to sale price',
-    'description': 'Add product tax in sale price on sale orders, use for add icms, pis, cofins to product final price',
+    'name': 'Include sale discount on invoices',
+    'description': 'Includes sales discounts and recalc final invoice price',
     'category': 'sale',
     'license': 'AGPL-3',
     'author': 'KMEE',
     'website': 'www.kmee.com.br',
     'version': '7.0',
-    'depends': ['sale'],
+    'depends': ['l10n_br_sale'],
     'data': [
-        'view/account_tax_view.xml',
-        'view/sale_order_view.xml',
         ],
     'test': [],
     'demo': [],
-    'installable': True,
+    'installable': False,
     'active': False,
 }
