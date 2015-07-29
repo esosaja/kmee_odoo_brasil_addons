@@ -58,7 +58,7 @@ class Boleto(object):
 
                 self.boleto = BoletoCaixaSigcb()
             else:
-                self.boleto = bank.get_class_for_codigo(bank_code)
+                self.boleto = bank.get_class_for_codigo(bank_code)()
             self.create(move_line)
 
 
