@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="payment_conditions_payment_mode_form" model="ir.ui.view">
+            <field name="name">payment_conditions_payment_mode.form</field>
+            <field name="model">payment.mode</field>
+            <field name="inherit_id" ref="account_payment.view_payment_mode_form"/>
+            <field name="arch" type="xml">
+                <form position="inside">
+                    <group>
+                        <field name="verificar_limite_credito"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="payment_conditions_payment_term_form" model="ir.ui.view">
+            <field name="name">payment_conditions_payment_term.form</field>
+            <field name="model">account.payment.term</field>
+            <field name="inherit_id" ref="account.view_payment_term_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//separator[@string='Computation']" position="replace"/>
+                <xpath expr="//label[@for='note']" position="replace"/>
+                <xpath expr="//field[@name='line_ids']" position="replace"/>
+                <xpath expr="//field[@name='note']" position="replace"/>
+
+                <form position="inside">
+                    <group>
+                        <group>
+                            <field name="valor_minimo"/>
+                            <field name="valor_maximo"/>
+                        </group>
+                        <group>
+                            <field name="valor_fixo"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Calcular">
+                            <field name="line_ids"/>
+                        </page>
+                        <page string="Modos de pagamento">
+                            <field name="payment_mode_id"/>
+                        </page>
+                        <page string="Descrição">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </form>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
