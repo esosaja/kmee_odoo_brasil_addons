@@ -41,6 +41,7 @@ It assigns manager and user access rights to the Administrator and only user rig
     ],
     'data': [
         'views/payment_conditions.xml',
+        'views/res_partner_view.xml',
     ],
     'demo': [
     ],
