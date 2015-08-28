@@ -26,8 +26,8 @@ from openerp.exceptions import Warning
 class PaymentModel(models.Model):
     _inherit = 'payment.mode'
 
-    verificar_limite_credito = fields.Boolean(string='Verificar credito',
-                                              default=True)
+    # verificar_limite_credito = fields.Boolean(string='Verificar credito',  default=True)
+    verify_credit_limit = fields.Boolean(string='Verificar credito',  default=True)
 
 
 class AccountPaymentTerm(models.Model):
@@ -54,29 +54,29 @@ class SaleOrder(models.Model):
         """
         Condition method for the workflow from draft to confirm
         """
-
-        if not self.payment_mode_id.verificar_limite_credito:
-            if self.amount_total < self.payment_term.valor_minimo:
-                raise Warning('Valor de compra menor do que o valor minimo para essa operacao!')
-                return False
-
-            if (self.amount_total > self.payment_term.valor_maximo) and self.payment_term.valor_maximo != 0:
-                raise Warning('Valor de compra maior do que o valor maximo para essa operacao!')
-                return False
-            return True
-        else:
-            if self.amount_total <= (self.partner_id.credit_limit - self.partner_id.credit):
-
-                if self.amount_total < self.payment_term.valor_minimo:
-                    raise Warning('Valor de compra menor do que o valor minimo para essa operacao!')
-                    return False
-
-                if(self.amount_total > self.payment_term.valor_maximo) or self.payment_term.valor_maximo != 0:
-                    raise Warning('Valor de compra maior do que o valor maximo para essa operacao!')
-                    return False
-                return True
-            raise Warning('Caloteeeeeeee! Credito disponivel: {}'.format(
-                (self.partner_id.credit_limit - self.partner_id.credit)))
-            return False
+        #
+        # if not self.payment_mode_id.verificar_limite_credito:
+        #     if self.amount_total < self.payment_term.valor_minimo:
+        #         raise Warning('Valor de compra menor do que o valor minimo para essa operacao!')
+        #         return False
+        #
+        #     if (self.amount_total > self.payment_term.valor_maximo) and self.payment_term.valor_maximo != 0:
+        #         raise Warning('Valor de compra maior do que o valor maximo para essa operacao!')
+        #         return False
+        #     return True
+        # else:
+        #     if self.amount_total <= (self.partner_id.credit_limit - self.partner_id.credit):
+        #
+        #         if self.amount_total < self.payment_term.valor_minimo:
+        #             raise Warning('Valor de compra menor do que o valor minimo para essa operacao!')
+        #             return False
+        #
+        #         if(self.amount_total > self.payment_term.valor_maximo) or self.payment_term.valor_maximo != 0:
+        #             raise Warning('Valor de compra maior do que o valor maximo para essa operacao!')
+        #             return False
+        #         return True
+        #     raise Warning('Caloteeeeeeee! Credito disponivel: {}'.format(
+        #         (self.partner_id.credit_limit - self.partner_id.credit)))
+        #     return False
 
         return super(SaleOrder, self).test_exceptions()

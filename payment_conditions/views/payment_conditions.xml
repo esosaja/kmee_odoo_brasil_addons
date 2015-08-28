@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <form position="inside">
                     <group>
-                        <field name="verificar_limite_credito"/>
+                        <field name="verify_credit_limit"/>
                     </group>
                 </form>
             </field>

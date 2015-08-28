@@ -37,6 +37,7 @@ It assigns manager and user access rights to the Administrator and only user rig
     'depends': [
         'account_payment_sale',
         'sale_exceptions',
+        'account_due_list',
     ],
     'data': [
         'views/payment_conditions.xml',
