@@ -26,7 +26,6 @@ from openerp.exceptions import Warning
 class PaymentModel(models.Model):
     _inherit = 'payment.mode'
 
-    # verificar_limite_credito = fields.Boolean(string='Verificar credito',  default=True)
     verify_credit_limit = fields.Boolean(string='Verificar credito',  default=True)
 
 

@@ -29,32 +29,23 @@ class ResPartner(orm.Model):
     _inherit = 'res.partner'
 
     def _credit_debit_get_limit_2(self, cr, uid, ids, field_names, arg, context=None):
-        print "TESTETSTESE"
+
         result = {}
         for partner_id in ids:
-            result[partner_id] = 2.0
+            res = super(ResPartner, self)._credit_debit_get(cr, uid, ids, field_names, arg, context=context)
+            result[partner_id] = {'credit_with_limit': res[partner_id]['credit'] if 'credit' in res[partner_id] else 0.00}
         return result
-        # return super(ResPartner, self)._credit_debit_get(cr, uid, ids, field_names, arg, context=None)
-
-        # for record in self:
-        #     record.credit_with_limit = res
 
     def _credit_limit_search(self, cr, uid, obj, name, args, context=None):
         return self._asset_difference_credit_search(cr, uid, obj, name, 'receivable', args, context=context)
 
-    # def _debit_search(self, cr, uid, obj, name, args, context=None):
-    #     return self._asset_difference_search(cr, uid, obj, name, 'payable', args, context=context)
-
     def _asset_difference_credit_search(self, cr, uid, obj, name, type, args, context=None):
-
-        print 'respartner!!!!!'
 
         if not args:
             return []
         having_values = tuple(map(itemgetter(2), args))
         where = ' AND '.join(
-            map(lambda x: '(SUM(bal2) %(operator)s %%s)' % {
-                                'operator':x[1]},args))
+            map(lambda x: '(SUM(bal2) %(operator)s %%s)' % {'operator': x[1]}, args))
 
         query = self.pool.get('account.move.line')._query_get(cr, uid, context=context)
 
@@ -67,23 +58,25 @@ class ResPartner(orm.Model):
                                 '(SELECT id FROM account_account '\
                                 'WHERE type=%s AND active) ' \
                             'AND reconcile_id IS NULL ' \
-                            'AND (SELECT payment_mode_id FROM payment_mode_rel WHERE payment_term_id=payment_term_id) IN (' \
+                            'AND (SELECT payment_mode_id FROM payment_mode_rel WHERE ' \
+                                'payment_term_id=l.payment_term_id) IN (' \
                                 'SELECT id FROM payment_mode WHERE ' \
-                                'verify_credit_limit IS True )' \
+                                'verify_credit_limit IS True)' \
                             'AND '+query+') AS l ' \
                         'RIGHT JOIN res_partner p ' \
                         'ON p.id = partner_id ) AS pl ' \
                     'GROUP BY pid HAVING ' + where),
                     (type,) + having_values)
+
         res = cr.fetchall()
         if not res:
             return [('id', '=', '0')]
         return [('id', 'in', map(itemgetter(0), res))]
 
     _columns = {
-        'credit_with_limit': fields.function(_credit_debit_get_limit_2, fnct_search=_credit_limit_search, type='float',
-                                             string='Total recebivel com credito',
-                                             multi='dc', method=True, help="Total amount this customer owes you."),
+        'credit_with_limit': fields.function(_credit_debit_get_limit_2, fnct_search=_credit_limit_search,
+                                             string='Total recebivel com credito', type='float',
+                                             multi='dc2', method=True, help="Total amount this customer owes you."),
     }
 
     # credit_with_limit = fields.Float(compute='_credit_debit_get_limit_2', search='_credit_limit_search',
