@@ -23,7 +23,7 @@
 				</xpath>
 	        </field>
 	    </record>
-	    <record model="ir.ui.view" id="view_5acts_crmlead_form2">
+	<!--    <record model="ir.ui.view" id="view_5acts_crmlead_form2">
 	        <field name="name">5_acts.crmlead.form2</field>
 	        <field name="model">crm.lead</field>
 	        <field name="inherit_id" ref="l10n_br_crm.l10n_br_crm_case_form_view_leads1" />
@@ -36,7 +36,7 @@
 					<attribute name="options">{'limit': 10, 'create': false, 'create_edit': false}</attribute>				
 				</xpath>
 	        </field>
-	    </record>
+	    </record> 
 	    <record model="ir.ui.view" id="view_5acts_crmlead_form3">
 	        <field name="name">5_acts.crmlead.form3</field>
 	        <field name="model">crm.lead</field>
@@ -50,6 +50,6 @@
 					<attribute name="options">{'limit': 10, 'create': false, 'create_edit': false}</attribute>				
 				</xpath>
 	        </field>
-	    </record>
+	    </record> -->
     </data>
 </openerp>
